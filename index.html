@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="./assets/styles.css" rel="stylesheet" />
+    <script defer src="./assets/script.js"></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand ms-1"
+          ><img src="img/Nebula Tech-logos_white.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item p-3">
+              <a href="#Home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item p-3">
+              <a href="#About" class="nav-link">About</a>
+            </li>
+            <li class="nav-item p-3">
+              <a href="#Education" class="nav-link">Education</a>
+            </li>
+            <li class="nav-item p-3">
+              <a href="#Skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item p-3">
+              <a href="#Projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item p-3">
+              <a href="#Contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="text-light p-5 text-center text-sm-start" id="Home">
+      <div class="container">
+        <div class="d-sm-flex">
+          <div class="row g-4 align-items-center justify-content-evenly">
+            <div class="col">
+              <div>
+                <h3 class="text-dark">Hello There, I'm</h3>
+                <h1><span class="txt1">Thiran Salinda</span></h1>
+
+                <h2 class="text-dark">I am a :</h2>
+                <h3
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.3s"
+                >
+                  <span class="typed-text"></span
+                  ><span class="cursor typing">&nbsp;</span>
+                </h3>
+
+                <script>
+                  const typedTextSpan = document.querySelector(".typed-text");
+                  const cursorSpan = document.querySelector(".cursor");
+
+                  const textArray = [
+                    "WEB DEVELOPER",
+                    "SOFTWARE ENGINEER",
+                    "VIDEO EDITOR",
+                    "GRADUATE",
+                  ];
+                  const typingDelay = 200;
+                  const erasingDelay = 100;
+                  const newTextDelay = 2000; // Delay between current and next text
+                  let textArrayIndex = 0;
+                  let charIndex = 0;
+
+                  function type() {
+                    if (charIndex < textArray[textArrayIndex].length) {
+                      if (!cursorSpan.classList.contains("typing"))
+                        cursorSpan.classList.add("typing");
+                      typedTextSpan.textContent +=
+                        textArray[textArrayIndex].charAt(charIndex);
+                      charIndex++;
+                      setTimeout(type, typingDelay);
+                    } else {
+                      cursorSpan.classList.remove("typing");
+                      setTimeout(erase, newTextDelay);
+                    }
+                  }
+
+                  function erase() {
+                    if (charIndex > 0) {
+                      if (!cursorSpan.classList.contains("typing"))
+                        cursorSpan.classList.add("typing");
+                      typedTextSpan.textContent = textArray[
+                        textArrayIndex
+                      ].substring(0, charIndex - 1);
+                      charIndex--;
+                      setTimeout(erase, erasingDelay);
+                    } else {
+                      cursorSpan.classList.remove("typing");
+                      textArrayIndex++;
+                      if (textArrayIndex >= textArray.length)
+                        textArrayIndex = 0;
+                      setTimeout(type, typingDelay + 1100);
+                    }
+                  }
+
+                  document.addEventListener("DOMContentLoaded", function () {
+                    // On DOM Load initiate the effect
+                    if (textArray.length) setTimeout(type, newTextDelay + 250);
+                  });
+                </script>
+                <!-- <div class="wrapper text-dark">
+                            <div class="static-text">I'm a</div>
+                            <ul class="dynamic-text">
+                                <li><span>Software Engineer</span></li>
+                                <li><span>Web Developer</span></li>
+                                <li><span>UI Designer</span></li>
+                                <li><span>Freelancer</span></li>
+                            </ul>
+                        </div> -->
+                <h2 class="text-dark">
+                  <i class="bi bi-envelope-fill"></i> thiransalinda.i@gmail.com
+                </h2>
+                <h2 class="text-dark">
+                  <i class="bi bi-telephone-fill"></i> +94-77 512 2757
+                </h2>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="d-flex social-icons">
+                    <a href="https://github.com/ThiranSalinda"
+                      ><i class="bi bi-github text-dark mx-1"></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/thiran-salinda-65a8401bb/"
+                      ><i class="bi bi-linkedin text-dark mx-1"></i
+                    ></a>
+                    <a href="https://twitter.com/SalindaThiran"
+                      ><i class="bi bi-twitter text-dark mx-1"></i
+                    ></a>
+                    <a href="https://www.facebook.com/thiran.salinda.14/"
+                      ><i class="bi bi-facebook text-dark mx-1"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-sm-flex">
+            <img class="img-fulid" src="img/Profile1 (4).png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section class="p-5 text-center text-sm-start" id="About">
+      <h4 class="ui horizontal divider header">
+        <i class="user circle icon"></i>
+        About Me
+      </h4>
+      <div class="container">
+        <div class="col-12 text-center pt-5">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div class="d-sm-flex">
+              <img
+                class="img-fluid w-25 d-none d-sm-block wow fadeInLeft"
+                src="img/prof.jpg"
+                alt=""
+                data-wow-duration="0.8s"
+                data-wow-delay="0.2s"
+                style="
+                  visibility: visible;
+                  animation-duration: 0.8s;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInLeft;
+                "
+              />
+              <div class="p-5 About-content">
+                <h1
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                  style="
+                    visibility: visible;
+                    animation-duration: 0.8s;
+                    animation-delay: 0.1s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  About me
+                </h1>
+
+                <p
+                  class="lead my-4 wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.3s"
+                  style="
+                    visibility: visible;
+                    animation-duration: 0.8s;
+                    animation-delay: 0.3s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  A student with an aptitude for computer systems and Software
+                  Engineering, having numerous skills like Strong decision
+                  making, Complex problem solving, Team playing, Fast learning,
+                  and Critical Thinking. I am eager to work with professional
+                  workers to develop my potentials while performing the
+                  necessary tasks.
+                </p>
+                <!-- <div class="ui vertical animated orange button" tabindex="0">
+                    <div class="visible content"> <a class="download-cv text-white" href="./assets/Thiran's resume.pdf" download=""> Download CV</div>
+                    <div class="hidden content">
+                      <i class="down arrow icon"></i>
+                    </div>
+                  </div> -->
+
+                <div
+                  class="ui vertical animated button orange button"
+                  tabindex="0"
+                >
+                  <div class="visible content text-white">Download CV</div>
+                  <a href="/Portfolio/assets/Thiran's resume.pdf" download="">
+                    <div class="hidden content">
+                      <i class="down arrow icon text-white"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="px-0 py-5 text-center text-sm-start" id="Education">
+      <h4 class="ui horizontal divider header">
+        <i class="graduation cap icon"></i>
+        Education
+      </h4>
+      <div class="hero-image d-flex align-items-center">
+        <div class="container">
+          <div class="row p-5">
+            <div class="col-md-3">
+              <div class="ui raised link card">
+                <div class="content">
+                  <div class="image">
+                    <img
+                      src="./img/resized-image-Promo (1).jpeg "
+                      class="img-fulid"
+                    />
+                  </div>
+                  <div class="header">
+                    Bsc.Computer Science and Software Engineering
+                  </div>
+                  <br />
+                  <div class="meta">
+                    <span class="category"
+                      >University of Bedfordshire , United Kingdom</span
+                    >
+                  </div>
+                  <div class="description">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"> Out in 2021 June </span>
+                  <span> Joined in 2020 Oct </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="ui raised link card">
+                <div class="content">
+                  <div class="image">
+                    <img src="./img/resized-image-Promo (2).jpeg" />
+                  </div>
+                  <div class="header">
+                    Higher National Diploma in Computer Science
+                  </div>
+                  <br />
+                  <div class="meta">
+                    <span class="category"
+                      >Sri Lanka Institute of Information Technology , Sri
+                      Lanaka</span
+                    >
+                  </div>
+                  <div class="description">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"> Out in 2020 June </span>
+                  <span> Joined in 2018 Feb </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="ui raised link card">
+                <div class="content">
+                  <div class="image">
+                    <img src="./img/resized-image-Promo (3).jpeg" />
+                  </div>
+                  <div class="header">
+                    <br />
+                    Advanced Level
+                  </div>
+                  <br />
+                  <div class="meta">
+                    <span class="category">Senanayake College, Madampe</span>
+                    <br />
+                    <br />
+                  </div>
+                  <div class="description">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"> Out in 2017 </span>
+                  <span> Joined in 2015 </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="ui raised link card">
+                <div class="content">
+                  <div class="image">
+                    <img src="./img/resized-image-Promo (4).jpeg" />
+                  </div>
+                  <div class="header">
+                    <br />
+                    Ordinary Level
+                  </div>
+                  <br />
+                  <div class="meta">
+                    <span class="category"
+                      >Gunananda College , Bibiladeniya
+                    </span>
+                    <br />
+                    <br />
+                  </div>
+                  <div class="description">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"> Out in 2014 </span>
+                  <span> Joined in 2003 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills -->
+
+    <section class="mh-skills p-5" id="Skills">
+      <h4 class="ui horizontal divider header">
+        <i class="clipboard list icon"></i>
+        Skills
+      </h4>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="mh-skills-inner">
+              <div class="mh-professional-skills">
+                <h3>Technical skills</h3>
+
+                <div class="each-skills">
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Java</div>
+                        <div class="percentage-num"></div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 65%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">HTML / CSS</div>
+                        <div class="percentage-num"></div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 80%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Bootstrap</div>
+                        <div class="percentage-num"></div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 80%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Angular</div>
+                        <div class="percentage-num"></div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 65%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Node.JS</div>
+                        <div class="percentage-num"></div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 65%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">WordPress</div>
+                        <div class="percentage-num"></div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 50%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6">
+            <div class="mh-professional-skills">
+              <h3>Professional Skills</h3>
+              <ul class="mh-professional-progress">
+                <li>
+                  <div
+                    class="mh-progress mh-pregress-circle p-5"
+                    data-progress="75"
+                  ></div>
+                  <h5><div class="pr-skill-name">Communication</div></h5>
+                </li>
+
+                <li>
+                  <div
+                    class="mh-progress mh-pregress-circle p-5"
+                    data-progress="90"
+                  ></div>
+                  <h5><div class="pr-skill-name">Team Work</div></h5>
+                </li>
+
+                <li>
+                  <div
+                    class="mh-progress mh-pregress-circle p-5"
+                    data-progress="80"
+                  ></div>
+                  <h5><div class="pr-skill-name">Project Managment</div></h5>
+                </li>
+
+                <li>
+                  <div
+                    class="mh-progress mh-pregress-circle p-5"
+                    data-progress="80"
+                  ></div>
+                  <h5><div class="pr-skill-name">Creativity</div></h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="p-5 align-items-center text-sm-start" id="Projects">
+      <h4 class="ui horizontal divider header">
+        <i class="edit icon"></i>
+        Projects
+      </h4>
+      <div class="container align-items-center" id="project-con">
+        <div class="row g-4 py-5">
+          <div class="col-4">
+            <div class="ui card">
+              <div class="content">
+                <div class="header">Management System (Client Requirement)</div>
+                <span class="category">(University project)</span>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col">
+                    <h5>Year:</h5>
+                    <p>3rd Year 2nd Semester</p>
+                  </div>
+                  <div class="col">
+                    <h5>Type:</h5>
+                    <p class="">Group Project</p>
+                  </div>
+                  <div class="col">
+                    <h5>Language:</h5>
+                    <p>Angular / Node.JS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="extra content">
+                <button
+                  class="ui inverted orange button"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  style="
+                    visibility: visible;
+                    animation-duration: 0.8s;
+                    animation-delay: 0.1s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="ui card">
+              <div class="content">
+                <div class="header">Game Popularity Prediction System.</div>
+                <span class="category">(University Final Research)</span>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col">
+                    <h5>Year:</h5>
+                    <p>3rd Year 2nd Semester</p>
+                  </div>
+                  <div class="col">
+                    <h5>Type:</h5>
+                    <p class="">Singular Project</p>
+                  </div>
+                  <div class="col">
+                    <h5>Language:</h5>
+                    <p>Angular / Node.JS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="extra content">
+                <button
+                  class="ui inverted orange button"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop2"
+                  style="
+                    visibility: visible;
+                    animation-duration: 0.8s;
+                    animation-delay: 0.1s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="ui card">
+              <div class="content">
+                <div class="header">Game Popularity Prediction System.</div>
+                <span class="category">(University Final Research)</span>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col">
+                    <h5>Year:</h5>
+                    <p>3rd Year 2nd Semester</p>
+                  </div>
+                  <div class="col">
+                    <h5>Type:</h5>
+                    <p class="">Singular Project</p>
+                  </div>
+                  <div class="col">
+                    <h5>Language:</h5>
+                    <p>Angular / Node.JS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="extra content">
+                <button
+                  class="ui inverted orange button"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop2"
+                  style="
+                    visibility: visible;
+                    animation-duration: 0.8s;
+                    animation-delay: 0.1s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="ui card">
+              <div class="content">
+                <div class="header">Game Popularity Prediction System.</div>
+                <span class="category">(University Final Research)</span>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col">
+                    <h5>Year:</h5>
+                    <p>3rd Year 2nd Semester</p>
+                  </div>
+                  <div class="col">
+                    <h5>Type:</h5>
+                    <p class="">Singular Project</p>
+                  </div>
+                  <div class="col">
+                    <h5>Language:</h5>
+                    <p>Angular / Node.JS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="extra content">
+                <button
+                  class="ui inverted orange button"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop2"
+                  style="
+                    visibility: visible;
+                    animation-duration: 0.8s;
+                    animation-delay: 0.1s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="p-5 text-center text-sm-start" id="Contact">
+      <h4 class="ui horizontal divider header">
+        <i class="phone icon"></i>
+        Contact
+      </h4>
+    </section>
+
+    <!-- Modal 1-->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="
+          modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable
+        "
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal 2 -->
+    <div
+      class="modal fade"
+      id="staticBackdrop2"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./js/circle-progress.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+  </body>
+</html>
