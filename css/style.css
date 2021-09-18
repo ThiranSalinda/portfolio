@@ -171,6 +171,9 @@ li a:hover:not(.active) {
 #staticBackdrop .modal-content {
   background: #0000003b;
 }
+#staticBackdrop .lead {
+  text-align: left;
+}
 
 #staticBackdrop2 {
   background: #00000086;
@@ -178,6 +181,9 @@ li a:hover:not(.active) {
 
 #staticBackdrop2 .modal-content {
   background: #0000003b;
+}
+#staticBackdrop2 .lead {
+  text-align: left;
 }
 
 #staticBackdrop3 {
@@ -187,6 +193,9 @@ li a:hover:not(.active) {
 #staticBackdrop3 .modal-content {
   background: #0000003b;
 }
+#staticBackdrop3 .lead {
+  text-align: left;
+}
 
 #staticBackdrop4 {
   background: #00000086;
@@ -194,6 +203,9 @@ li a:hover:not(.active) {
 
 #staticBackdrop4 .modal-content {
   background: #0000003b;
+}
+#staticBackdrop4 .lead {
+  text-align: left;
 }
 
 #Contact {
