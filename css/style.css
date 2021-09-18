@@ -113,7 +113,7 @@ li a:hover:not(.active) {
 }
 
 #Home {
-  height: 821px;
+  height: 1000px;
   background: rgb(255, 255, 255);
   display: inline-block;
   width: 100%;
@@ -185,6 +185,14 @@ li a:hover:not(.active) {
 }
 
 #staticBackdrop3 .modal-content {
+  background: #0000003b;
+}
+
+#staticBackdrop4 {
+  background: #00000086;
+}
+
+#staticBackdrop4 .modal-content {
   background: #0000003b;
 }
 
