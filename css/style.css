@@ -164,6 +164,30 @@ li a:hover:not(.active) {
   width: unset !important;
 }
 
+#staticBackdrop {
+  background: #00000086;
+}
+
+#staticBackdrop .modal-content {
+  background: #0000003b;
+}
+
+#staticBackdrop2 {
+  background: #00000086;
+}
+
+#staticBackdrop2 .modal-content {
+  background: #0000003b;
+}
+
+#staticBackdrop3 {
+  background: #00000086;
+}
+
+#staticBackdrop3 .modal-content {
+  background: #0000003b;
+}
+
 #Contact {
   height: 821px;
   background: rgb(255, 255, 255);
